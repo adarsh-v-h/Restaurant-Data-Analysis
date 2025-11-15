@@ -13,22 +13,6 @@ The goal is to clean the dataset, understand patterns, build ML models, and fina
 
 ---
 
-## 📂 Project Structure
-Cognifyz-ML-Internship/
-│── data/
-│ ├── raw/ ← original dataset
-│ └── cleaned/ ← cleaned_dataset.csv (ready for ML)
-│
-│── notebooks/ ← EDA + modeling notebooks
-│── src/ ← preprocessing + utilities + model scripts
-│── models/ ← saved trained models
-│── visuals/ ← plots and charts
-│── reports/ ← task-wise PDF reports
-│── README.md ← project documentation
-
-
----
-
 ## 📘 Dataset Summary
 
 - **Rows:** 9,551  
