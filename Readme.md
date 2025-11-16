@@ -41,7 +41,7 @@ Key features include:
 
 ## ✔️ Progress Checklist
 
-### **Completed Till Now**
+### **Dataset Processing**
 - [x] Load raw dataset  
 - [x] Inspect dtypes, structure, missing values  
 - [x] Remove irrelevant columns  
@@ -49,9 +49,18 @@ Key features include:
 - [x] Convert Yes/No → 1/0  
 - [x] Save cleaned dataset  
 
+### **What we understood from the dataset, EDA Visualizations**
+- Most ratings concentrate between **2.8–4.2**, with **0.0** representing unrated restaurants.
+- Cost distribution is extremely skewed, requiring log transformation to reveal true spending patterns.
+- Votes correlate positively with both rating and price range—popular restaurants tend to be better rated and slightly more premium.
+- The dataset is geographically skewed toward **Delhi NCR**, with international entries evenly distributed.
+- Strong correlations exist between **Price Range ↔ Average Cost** and **Price Range ↔ Table Booking**, revealing consumer segmentation.
+- Rating is not strongly influenced by cost, delivery availability, or table booking—indicating deeper factors like food quality or service.
+- You can view the Plots in the /visuals directory.
+
+---
 
 ## 🧪 How to Run the Project
-
 ```bash
 # Create environment
 python -m venv venv
