@@ -39,8 +39,9 @@ Key features include:
 
 ---
 
-## 📂 Project Structure
-.
+<h3>📂 Project Structure</h3>
+
+<pre>
 ├── data/
 │   ├── raw/                # Original dataset
 │   ├── cleaned/            # Cleaned CSV after preprocessing
@@ -54,8 +55,10 @@ Key features include:
 ├── models/                 # Saved models, scalers, encoders, splits
 ├── reports/                # Final PDF reports (EDA + ML + Summary)
 └── README.md
+</pre>
 
 ---
+
 ## ✔️ Progress Checklist
 
 ### **Dataset Processing**
