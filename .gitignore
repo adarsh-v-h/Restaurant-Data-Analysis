@@ -1,11 +1,32 @@
+# Python cache
 __pycache__/
 *.pyc
-.env
+
+# Environments (rename your env from "test" to something else)
+venv/
+env/
 test/
-.env/
+
+# Jupyter notebooks checkpoints
 .ipynb_checkpoints/
+
+# Data (all stages)
 data/raw/
 data/cleaned/
+data/processed/
+
+# Model artifacts
 models/
+checkpoints/
+logs/
+artifacts/
+
+# Environment variables
+.env
+
+# SQLite / temp files
 *.sqlite3
+
+# OS files
 .DS_Store
+Thumbs.db

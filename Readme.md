@@ -38,7 +38,23 @@ Key features include:
 - **JupyterLab** for EDA & experimentation    
 
 ---
+## Project Structure
 
+├── data/
+│   ├── raw/                # Original dataset
+│   ├── cleaned/            # Cleaned CSV after preprocessing
+│   └── processed/          # Final ML-ready dataset
+├── notebooks/
+│   ├── 01_data_cleaning.ipynb
+│   ├── 02_eda_visualizations.ipynb
+│   ├── 03_feature_engineering.ipynb
+│   └── 04_baseline_models.ipynb
+├── visuals/                # All generated plots
+├── models/                 # Saved models, scalers, encoders, splits
+├── reports/                # Final PDF reports (EDA + ML + Summary)
+└── README.md
+
+---
 ## ✔️ Progress Checklist
 
 ### **Dataset Processing**
@@ -60,6 +76,16 @@ Key features include:
 
 ---
 
+### **Feature Engineering Summary**
+- Removed unrated restaurants (rating = 0.0)
+- Frequency encoded City to capture restaurant density
+- Grouped rare cuisines (<10 occurrences) into "Other"
+- One-hot encoded the final Cuisine_Grouped column
+- Converted Country Code into categorical codes
+- Dropped unnecessary text and geo-location columns (name, address, lat/long, etc.)
+- Created df_model — a fully numeric, ML-ready dataset
+- Performed an 80/20 train–test split
+
 ## 🧪 How to Run the Project
 ```bash
 # Create environment
@@ -71,3 +97,14 @@ pip install -r requirements.txt
 
 # Launch Jupyter
 jupyter lab
+```
+
+---
+
+## Highlights
+- Dataset from 15+ countries
+- 9,551 restaurants analyzed
+- 50+ engineered features (including cuisines, pricing, frequency encoding)
+- Rich visual analysis stored in /visuals
+- Scalable feature engineering pipeline
+- ML-ready dataset with 7 numeric + 45 one-hot features
