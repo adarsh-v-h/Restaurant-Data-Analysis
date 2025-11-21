@@ -38,8 +38,9 @@ Key features include:
 - **JupyterLab** for EDA & experimentation    
 
 ---
-## Project Structure
 
+## 📂 Project Structure
+.
 ├── data/
 │   ├── raw/                # Original dataset
 │   ├── cleaned/            # Cleaned CSV after preprocessing
