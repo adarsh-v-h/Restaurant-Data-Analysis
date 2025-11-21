@@ -52,7 +52,10 @@ Key features include:
 │   ├── 03_feature_engineering.ipynb
 │   └── 04_baseline_models.ipynb
 ├── visuals/                # All generated plots
-├── models/                 # Saved models, scalers, encoders, splits
+├── models/
+│   │── best_model_random_forest.joblib       # saved model
+│   │── feature_list.joblib                   # required for deployment
+│   └── rf_predictions.joblib                 # predictions + ground truth
 ├── reports/                # Final PDF reports (EDA + ML + Summary)
 └── README.md
 </pre>
@@ -68,6 +71,8 @@ Key features include:
 - [x] Extract *Primary Cuisine*  
 - [x] Convert Yes/No → 1/0  
 - [x] Save cleaned dataset  
+
+---
 
 ### **What we understood from the dataset, EDA Visualizations**
 - Most ratings concentrate between **2.8–4.2**, with **0.0** representing unrated restaurants.
@@ -90,11 +95,39 @@ Key features include:
 - Created df_model — a fully numeric, ML-ready dataset
 - Performed an 80/20 train–test split
 
+---
+
+### **Baseline Models and Results**
+1. **Linear Regression**
+- R²: 0.43
+- MAE: 0.33
+- RMSE: 0.41
+Conclusion: Simple models fail to capture the non-linear nature of restaurant ratings. Underfits the data.<br>
+
+2. **Decision Tree**
+- R²: 0.31
+- MAE: 0.33
+- RMSE: 0.46
+Conclusion: Captures some relationships, but heavily overfits and lacks generalization.
+
+3. **Random Forest (Best Baseline Model)**
+- R²: 0.59
+- MAE: 0.26
+- RMSE: 0.35
+Conclusion: 
+- Learns complex, non-linear relationships
+- Stable, balanced predictions
+- Lowest error
+- Behaves well across full rating range
+This model is now saved in the /models directory for reuse.
+
+---
+
 ## 🧪 How to Run the Project
 ```bash
 # Create environment
 python -m venv venv
-source venv/bin/activate   # or venv\Scripts\activate
+source venv/bin/activate   # or venv\Scripts\activate for windows
 
 # Install dependencies
 pip install -r requirements.txt
@@ -112,3 +145,4 @@ jupyter lab
 - Rich visual analysis stored in /visuals
 - Scalable feature engineering pipeline
 - ML-ready dataset with 7 numeric + 45 one-hot features
+- Random Forest has shown the best results when compared to other models, therefore it will be used as baseline model
