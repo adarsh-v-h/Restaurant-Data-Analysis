@@ -121,7 +121,7 @@ Conclusion: Captures some relationships, but heavily overfits and lacks generali
 - R²: 0.59
 - MAE: 0.26
 - RMSE: 0.35 <br>
--
+
 Conclusion: 
 - Learns complex, non-linear relationships
 - Stable, balanced predictions
