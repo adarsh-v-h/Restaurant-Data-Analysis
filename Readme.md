@@ -108,19 +108,20 @@ Cognifyz-ML-Internship/
 1. **Linear Regression**
 - R²: 0.43
 - MAE: 0.33
-- RMSE: 0.41
+- RMSE: 0.41 <br>
 Conclusion: Simple models fail to capture the non-linear nature of restaurant ratings. Underfits the data.<br>
 
 2. **Decision Tree**
 - R²: 0.31
 - MAE: 0.33
-- RMSE: 0.46
+- RMSE: 0.46 <br>
 Conclusion: Captures some relationships, but heavily overfits and lacks generalization.
 
 3. **Random Forest (Best Baseline Model)**
 - R²: 0.59
 - MAE: 0.26
-- RMSE: 0.35
+- RMSE: 0.35 <br>
+-
 Conclusion: 
 - Learns complex, non-linear relationships
 - Stable, balanced predictions
