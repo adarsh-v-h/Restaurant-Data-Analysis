@@ -158,6 +158,14 @@ python -m venv venv
 pip install -r requirements.txt
 jupyter lab
 ```
+
+### **Run notebooks in order**
+- 01_data_cleaning.ipynb
+- 02_eda_visualizations.ipynb
+- 03_feature_engineering.ipynb
+- 04_baseline_models.ipynb
+- 05_hyperparameter_tuning.ipynb
+- 06_model_interpretation.ipynb
 ---
 
 ## Highlights
