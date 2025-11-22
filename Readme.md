@@ -1,4 +1,9 @@
-# 🍽️ Cognifyz Machine Learning Internship – Restaurant Data Analysis
+# Cognifyz — Restaurant Analytics (ML Internship Project)
+
+> Predicting restaurant ratings from Zomato-style listings — EDA → Feature Engineering → Modeling → Explainability.
+
+![Python](https://img.shields.io/badge/python-3.10-blue) ![Status](https://img.shields.io/badge/status-active-green)
+
 
 ## 📍 Project Overview
 This project analyzes restaurant data from multiple countries to uncover insights about:
@@ -42,22 +47,24 @@ Key features include:
 <h3>📂 Project Structure</h3>
 
 <pre>
+Cognifyz-ML-Internship/
+│
 ├── data/
-│   ├── raw/                # Original dataset
-│   ├── cleaned/            # Cleaned CSV after preprocessing
-│   └── processed/          # Final ML-ready dataset
+│ ├── raw/ # original dataset
+│ └── cleaned/ # cleaned & intermediate data
+│
 ├── notebooks/
-│   ├── 01_data_cleaning.ipynb
-│   ├── 02_eda_visualizations.ipynb
-│   ├── 03_feature_engineering.ipynb
-│   └── 04_baseline_models.ipynb
-├── visuals/                # All generated plots
-├── models/
-│   │── best_model_random_forest.joblib       # saved model
-│   │── feature_list.joblib                   # required for deployment
-│   └── rf_predictions.joblib                 # predictions + ground truth
-├── reports/                # Final PDF reports (EDA + ML + Summary)
-└── README.md
+│ ├── 01_data_cleaning.ipynb
+│ ├── 02_eda_visualizations.ipynb
+│ ├── 03_feature_engineering.ipynb
+│ ├── 04_baseline_models.ipynb
+│ ├── 05_hyperparameter_tuning.ipynb
+│ └── 06_model_interpretation.ipynb
+│
+├── visuals/ # all EDA & model evaluation plots
+├── models/ # saved models, splits, predictions
+├── Readme.md
+└── requirements.txt
 </pre>
 
 ---
@@ -123,19 +130,34 @@ This model is now saved in the /models directory for reuse.
 
 ---
 
-## 🧪 How to Run the Project
+## What the model learned (top features)
+
+Top drivers of predicted rating:
+- **Votes** (most important): social proof and volume of reviews are the strongest predictor.  
+- **City frequency**: urban context / restaurant density shapes rating behavior.  
+- **Average cost & Price range**: price-positioning matters, but not deterministically.  
+- Secondary signals: country, and cuisine categories (North Indian, Cafe, Chinese, Italian, etc.) adjust expectations.
+
+---
+
+## Quick start
+
+Recommended: use a virtual environment.
+
+**Linux / macOS**
 ```bash
-# Create environment
 python -m venv venv
-source venv/bin/activate   # or venv\Scripts\activate for windows
-
-# Install dependencies
+source venv/bin/activate
 pip install -r requirements.txt
-
-# Launch Jupyter
 jupyter lab
 ```
-
+**Windows (Powershell)**
+```bash
+python -m venv venv
+.\venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+jupyter lab
+```
 ---
 
 ## Highlights
