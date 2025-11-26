@@ -6,7 +6,7 @@ Usage:
 """
 import argparse
 from pathlib import Path
-import pandas as pd
+# import pandas as pd
 
 from data_utils import load_splits, ensure_visuals_dir, load_processed_df
 from model_utils import load_model, load_feature_list, predict_batch
