@@ -1,4 +1,4 @@
-# Task 1 — Predict Restaurant Ratings (src/task1)
+# — Predict Restaurant Ratings (src/task1)
 
 This folder wraps Task 1 into runnable Python scripts. It uses saved modeling artifacts (models/, visuals/) created via the notebooks.
 

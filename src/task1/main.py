@@ -1,9 +1,3 @@
-"""src/task1/main.py
-Quick runner to reproduce Task1 results using saved artifacts.
-Usage:
-    python src/task1/main.py --mode quick_eval
-    python src/task1/main.py --mode single_predict --idx 23
-"""
 import argparse
 from pathlib import Path
 # import pandas as pd
